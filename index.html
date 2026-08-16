@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Casa Ravena — Portal do Cliente | MIKAN Construtora</title>
+<meta name="description" content="Portal do Cliente de Casa Ravena, uma experiência MIKAN Construtora" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<div class="app-viewport">
+  <div class="phone">
+
+    <div class="status-bar">
+      <span>9:41</span>
+      <span>Casa Ravena</span>
+      <span>100%</span>
+    </div>
+
+    <!-- Área da marca (identidade MIKAN Construtora) -->
+    <div class="brand-header">
+      <p class="brand-mikan">MIKAN CONSTRUTORA</p>
+      <p class="brand-project">Casa Ravena</p>
+      <p class="brand-tagline">Portal do Cliente</p>
+    </div>
+
+    <!-- Seletor de modo (apenas para fins de demonstração do protótipo) -->
+    <div class="mode-bar">
+      <button class="mode-pill active" data-mode="cliente">Cliente</button>
+      <button class="mode-pill" data-mode="prestador">Prestador</button>
+      <button class="mode-pill" data-mode="construtora">Construtora</button>
+    </div>
+    <p class="mode-note">Alternância de papéis apenas para demonstração do protótipo</p>
+
+    <div class="screens">
+
+      <!-- ============================================================ -->
+      <!-- 1. TELA INICIAL -->
+      <!-- ============================================================ -->
+      <section class="screen active" id="screen-home">
+
+        <div class="estate-hero">
+          <div class="estate-brand-row">
+            <img class="mikan-mark" src="images/brand/mikan-logo.jpg" alt="MIKAN Construtora" />
+            <p class="estate-brand">MIKAN Construtora</p>
+          </div>
+          <h1 class="estate-title">Casa Ravena</h1>
+          <p class="estate-owners">Vanessa e Bruno</p>
+          <p class="estate-address">Rua Sérgio Ervino Michels, 33<br />Bairro Amaral Ribeiro<br />Sapiranga/RS</p>
+          <span class="estate-status-badge"><span class="dot"></span>Obra em andamento</span>
+        </div>
+
+        <div class="estate-carousel-wrap">
+          <div class="estate-carousel" id="estate-carousel">
+            <div class="estate-slide" style="background:linear-gradient(150deg,#2c2925,#4a453c);">
+              <div class="estate-slide-art" data-icon="building"></div>
+              <img class="estate-slide-img" src="images/casa-ravena/01-fachada-principal.jpg" alt="Fachada principal"
+                   onload="this.previousElementSibling.style.display='none';" onerror="this.style.display='none';" />
+              <div class="estate-slide-overlay">
+                <span class="estate-slide-index">01 / 05</span>
+                <span class="estate-slide-caption">Fachada principal</span>
+              </div>
+            </div>
+            <div class="estate-slide" style="background:linear-gradient(150deg,#403a30,#8c7a5b);">
+              <div class="estate-slide-art" data-icon="home"></div>
+              <img class="estate-slide-img" src="images/casa-ravena/02-vista-frontal.jpg" alt="Vista frontal"
+                   onload="this.previousElementSibling.style.display='none';" onerror="this.style.display='none';" />
+              <div class="estate-slide-overlay">
+                <span class="estate-slide-index">02 / 05</span>
+                <span class="estate-slide-caption">Vista frontal</span>
+              </div>
+            </div>
+            <div class="estate-slide" style="background:linear-gradient(150deg,#3c4a46,#82a69c);">
+              <div class="estate-slide-art" data-icon="drop"></div>
+              <img class="estate-slide-img" src="images/casa-ravena/03-area-piscina.jpg" alt="Área da piscina"
+                   onload="this.previousElementSibling.style.display='none';" onerror="this.style.display='none';" />
+              <div class="estate-slide-overlay">
+                <span class="estate-slide-index">03 / 05</span>
+                <span class="estate-slide-caption">Área da piscina</span>
+              </div>
+            </div>
+            <div class="estate-slide" style="background:linear-gradient(150deg,#332f2a,#5f5646);">
+              <div class="estate-slide-art" data-icon="door"></div>
+              <img class="estate-slide-img" src="images/casa-ravena/04-entrada-principal.jpg" alt="Entrada principal"
+                   onload="this.previousElementSibling.style.display='none';" onerror="this.style.display='none';" />
+              <div class="estate-slide-overlay">
+                <span class="estate-slide-index">04 / 05</span>
+                <span class="estate-slide-caption">Entrada principal</span>
+              </div>
+            </div>
+            <div class="estate-slide" style="background:linear-gradient(150deg,#4c4536,#a98a5c);">
+              <div class="estate-slide-art" data-icon="building"></div>
+              <img class="estate-slide-img" src="images/casa-ravena/05-vista-lateral.jpg" alt="Vista lateral"
+                   onload="this.previousElementSibling.style.display='none';" onerror="this.style.display='none';" />
+              <div class="estate-slide-overlay">
+                <span class="estate-slide-index">05 / 05</span>
+                <span class="estate-slide-caption">Vista lateral</span>
+              </div>
+            </div>
+          </div>
+          <div class="estate-dots" id="estate-dots"></div>
+        </div>
+
+        <div class="estate-status-card">
+          <div class="esc-head">
+            <p class="esc-title">Status da obra</p>
+            <span class="esc-pct-badge">35,14%</span>
+          </div>
+          <div class="esc-progress"><div class="esc-progress-fill" style="width:35.14%"></div></div>
+          <div class="esc-rows">
+            <div class="esc-row"><span class="esc-label">Etapa atual</span><span class="esc-value">Paredes e Painéis</span></div>
+            <div class="esc-row"><span class="esc-label">Situação da obra</span><span class="esc-value" style="color:var(--sage-estate);">Adiantada</span></div>
+            <div class="esc-row"><span class="esc-label">Próxima atualização</span><span class="esc-value">18/08/2026</span></div>
+            <div class="esc-row"><span class="esc-label">Responsável geral</span><span class="esc-value">Sagaz</span></div>
+            <div class="esc-row"><span class="esc-label">Próxima manutenção</span><span class="esc-value">Limpeza de calhas</span></div>
+            <div class="esc-row"><span class="esc-label">Plano de manutenção</span><span class="esc-value js-plano-atual">Nenhum contratado</span></div>
+          </div>
+        </div>
+
+        <div class="plan-hero-card" id="home-plan-card"></div>
+
+        <p class="estate-section-label">Acesso rápido</p>
+        <div class="estate-shortcuts">
+          <div class="estate-shortcut es-obra" data-nav="screen-obra">
+            <div class="es-icon" data-icon="building"></div>
+            <span>Minha Obra</span>
+          </div>
+          <div class="estate-shortcut es-atualizacoes" data-nav="screen-atualizacoes">
+            <div class="es-icon" data-icon="bell"></div>
+            <span>Atualizações</span>
+          </div>
+          <div class="estate-shortcut es-manutencao" data-nav="screen-servicos">
+            <div class="es-icon" data-icon="shield"></div>
+            <span>Manutenção</span>
+          </div>
+          <div class="estate-shortcut es-historico" data-nav="screen-historico">
+            <div class="es-icon" data-icon="history"></div>
+            <span>Histórico</span>
+          </div>
+          <div class="estate-shortcut es-documentos" data-nav="screen-documentos">
+            <div class="es-icon" data-icon="file"></div>
+            <span>Documentos</span>
+          </div>
+          <div class="estate-shortcut es-perfil" data-nav="screen-perfil">
+            <div class="es-icon" data-icon="user"></div>
+            <span>Perfil</span>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- ============================================================ -->
+      <!-- 2. MINHA OBRA -->
+      <!-- ============================================================ -->
+      <section class="screen" id="screen-obra">
+        <div class="cro-header">
+          <p class="cro-eyebrow">Casa Ravena</p>
+          <h1 class="cro-title">Cronograma da Obra</h1>
+        </div>
+
+        <div class="cro-progress-card">
+          <div class="cro-progress-top">
+            <span class="cro-progress-pct" id="cro-progress-pct">35,14%</span>
+            <span class="cro-progress-label">da obra concluída</span>
+          </div>
+          <div class="cro-progress-track"><div class="cro-progress-fill" id="cro-progress-fill" style="width:35.14%"></div></div>
+          <div class="cro-progress-meta">
+            <span class="cro-meta-item">Última atualização: <b>27/07/2026</b></span>
+            <span class="cro-status-chip"><span class="dot"></span>Situação: Adiantada</span>
+          </div>
+        </div>
+
+        <div class="link-row card mt-4" data-nav="screen-atualizacoes">
+          <span class="label"><span data-icon="history"></span> Ver linha do tempo de atualizações</span>
+          <span data-icon="chevronRight" data-icon-class="chevron"></span>
+        </div>
+
+        <div class="link-row card mt-4" data-nav="screen-documentos" style="margin-bottom: var(--space-6);">
+          <span class="label"><span data-icon="file"></span> Documentos da obra</span>
+          <span data-icon="chevronRight" data-icon-class="chevron"></span>
+        </div>
+
+        <p class="cro-section-label">Em andamento agora</p>
+        <div class="cro-active-list" id="cro-active-list"></div>
+
+        <p class="cro-section-label mt-6">Etapas concluídas</p>
+        <div class="cro-done-list" id="cro-done-list"></div>
+
+        <p class="cro-section-label mt-6">Próximas etapas</p>
+        <div class="cro-upcoming-list" id="cro-upcoming-list"></div>
+      </section>
+
+      <!-- ============================================================ -->
+      <!-- 3. ATUALIZAÇÕES DA OBRA -->
+      <!-- ============================================================ -->
+      <section class="screen" id="screen-atualizacoes">
+        <div class="topbar">
+          <button class="icon-btn" data-nav="screen-obra"><span data-icon="arrowLeft"></span></button>
+          <h1 class="page-title">Atualizações da obra</h1>
+        </div>
+
+        <p class="eyebrow mb-3" style="margin-bottom:12px;">Próxima etapa</p>
+        <div class="tl-card" style="margin-bottom: 28px;">
+          <div class="tl-top">
+            <span class="tl-stage">Revestimentos</span>
+            <span class="badge badge-yellow"><span class="dot"></span>Aguardando início</span>
+          </div>
+          <p class="desc">Etapa programada para iniciar após a conclusão das instalações elétrica e hidráulica.</p>
+          <div class="tl-by"><span data-icon="user"></span> Ezequiel · Revestimentos</div>
+        </div>
+
+        <div class="week-group">
+          <p class="week-title">Semana 18</p>
+          <p class="week-date">14/08/2026</p>
+          <div class="timeline">
+            <div class="timeline-item is-done">
+              <div class="tl-card">
+                <div class="tl-top">
+                  <span class="tl-stage">Instalação elétrica</span>
+                  <span class="badge badge-green"><span class="dot"></span>Aprovado</span>
+                </div>
+                <p class="desc">Instalação elétrica do pavimento térreo concluída. Iniciada preparação para revestimentos.</p>
+                <div class="tl-by"><span data-icon="user"></span> Mendes Instalações · Hidráulica e elétrica</div>
+                <div class="photo-row">
+                  <div class="photo-thumb" onclick="openPhoto()" data-icon="camera"></div>
+                  <div class="photo-thumb" onclick="openPhoto()" data-icon="camera"></div>
+                  <div class="photo-thumb" onclick="openPhoto()" data-icon="camera"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="week-group">
+          <p class="week-title">Semana 17</p>
+          <p class="week-date">07/08/2026</p>
+          <div class="timeline">
+            <div class="timeline-item is-done">
+              <div class="tl-card">
+                <div class="tl-top">
+                  <span class="tl-stage">Instalação hidráulica</span>
+                  <span class="badge badge-green"><span class="dot"></span>Aprovado</span>
+                </div>
+                <p class="desc">Tubulações de água fria instaladas em todo o pavimento térreo.</p>
+                <div class="tl-by"><span data-icon="user"></span> Mendes Instalações · Hidráulica e elétrica</div>
+                <div class="photo-row">
+                  <div class="photo-thumb" onclick="openPhoto()" data-icon="camera"></div>
+                  <div class="photo-thumb" onclick="openPhoto()" data-icon="camera"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="week-group">
+          <p class="week-title">Semana 16</p>
+          <p class="week-date">31/07/2026</p>
+          <div class="timeline">
+            <div class="timeline-item is-done">
+              <div class="tl-card">
+                <div class="tl-top">
+                  <span class="tl-stage">Cobertura</span>
+                  <span class="badge badge-green"><span class="dot"></span>Aprovado</span>
+                </div>
+                <p class="desc">Telhas cerâmicas finalizadas em toda a extensão do telhado.</p>
+                <div class="tl-by"><span data-icon="user"></span> Sagaz · Mestre de obras</div>
+                <div class="photo-row">
+                  <div class="photo-thumb" onclick="openPhoto()" data-icon="camera"></div>
+                  <div class="photo-thumb" onclick="openPhoto()" data-icon="camera"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="week-group">
+          <p class="week-title">Semana 15</p>
+          <p class="week-date">24/07/2026</p>
+          <div class="timeline">
+            <div class="timeline-item is-done">
+              <div class="tl-card">
+                <div class="tl-top">
+                  <span class="tl-stage">Instalação elétrica</span>
+                  <span class="badge badge-green"><span class="dot"></span>Aprovado</span>
+                </div>
+                <p class="desc">Início da passagem de fiação no pavimento térreo.</p>
+                <div class="tl-by"><span data-icon="user"></span> Mendes Instalações · Hidráulica e elétrica</div>
+                <div class="photo-row">
+                  <div class="photo-thumb" onclick="openPhoto()" data-icon="camera"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================ -->
+      <!-- 4. PRESTADOR DE SERVIÇO -->
+      <!-- ============================================================ -->
+      <section class="screen no-nav" id="screen-prestador">
+        <div class="topbar">
+          <button class="icon-btn" data-mode="cliente"><span data-icon="arrowLeft"></span></button>
+          <h1 class="page-title">Área do prestador</h1>
+        </div>
+
+        <p class="eyebrow mb-3" style="margin-bottom:10px;">Selecionar prestador</p>
+        <div class="provider-switcher" id="provider-switcher">
+          <button class="provider-chip" data-provider="sagaz" onclick="selectProvider('sagaz')">
+            <span class="pc-name">Sagaz</span>
+            <span class="pc-role">Mestre de obras</span>
+          </button>
+          <button class="provider-chip active" data-provider="mendes" onclick="selectProvider('mendes')">
+            <span class="pc-name">Mendes Instalações</span>
+            <span class="pc-role">Hidráulica e elétrica</span>
+          </button>
+          <button class="provider-chip" data-provider="alexandre" onclick="selectProvider('alexandre')">
+            <span class="pc-name">Alexandre</span>
+            <span class="pc-role">Pintura</span>
+          </button>
+          <button class="provider-chip" data-provider="ezequiel" onclick="selectProvider('ezequiel')">
+            <span class="pc-name">Ezequiel</span>
+            <span class="pc-role">Revestimentos</span>
+          </button>
+          <button class="provider-chip" data-provider="servicosrapidos" onclick="selectProvider('servicosrapidos')">
+            <span class="pc-name">Serviços Rápidos</span>
+            <span class="pc-role">Caixa de gordura</span>
+          </button>
+          <button class="provider-chip" data-provider="ecolimpa" onclick="selectProvider('ecolimpa')">
+            <span class="pc-name">EcoLimpa</span>
+            <span class="pc-role">Limpeza de calhas</span>
+          </button>
+        </div>
+
+        <div class="provider-header">
+          <div class="avatar" id="provider-avatar">MI</div>
+          <div>
+            <p style="font-size:16px;font-weight:800;" id="provider-greeting">Olá, equipe Mendes Instalações</p>
+            <p class="text-secondary" id="provider-role">Hidráulica e elétrica</p>
+          </div>
+        </div>
+
+        <p class="text-muted" style="margin:-8px 0 16px;font-size:12px;">Casa Ravena · Rua Sérgio Ervino Michels, 33 · Sapiranga/RS</p>
+
+        <!-- Dois fluxos distintos: Manutenção e Obra em andamento -->
+        <div class="pf-tabs" id="pf-tabs">
+          <button class="pf-tab active" data-flow="manutencao" onclick="setPrestadorFlow('manutencao')">Manutenção</button>
+          <button class="pf-tab" data-flow="obra" onclick="setPrestadorFlow('obra')">Obra em andamento</button>
+        </div>
+
+        <div id="pf-weekly-banner"></div>
+
+        <div class="pf-panel" id="pf-panel-manutencao"></div>
+        <div class="pf-panel" id="pf-panel-obra" style="display:none;"></div>
+
+        <div class="card mt-6">
+          <p class="section-title">Como funciona o fluxo</p>
+          <div class="flow-diagram">
+            <div class="flow-step current">
+              <div class="flow-dot-wrap"><div class="flow-dot">1</div><div class="flow-line"></div></div>
+              <div class="flow-text"><p class="t">Prestador registra</p><p class="d">Status, percentual, fotos e relato (escrito ou por áudio)</p></div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-dot-wrap"><div class="flow-dot">2</div><div class="flow-line"></div></div>
+              <div class="flow-text"><p class="t">Construtora recebe</p><p class="d">A atualização entra na fila de revisão</p></div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-dot-wrap"><div class="flow-dot">3</div><div class="flow-line"></div></div>
+              <div class="flow-text"><p class="t">Construtora revisa</p><p class="d">Conteúdo e fotos são conferidos</p></div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-dot-wrap"><div class="flow-dot">4</div><div class="flow-line"></div></div>
+              <div class="flow-text"><p class="t">Construtora aprova</p><p class="d">A atualização é liberada</p></div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-dot-wrap"><div class="flow-dot">5</div></div>
+              <div class="flow-text"><p class="t">Cliente visualiza</p><p class="d">Aparece na área do cliente com histórico completo</p></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================ -->
+      <!-- 5. CONSTRUTORA -->
+      <!-- ============================================================ -->
+      <section class="screen no-nav" id="screen-construtora">
+        <div class="topbar">
+          <button class="icon-btn" data-mode="cliente"><span data-icon="arrowLeft"></span></button>
+          <h1 class="page-title">Painel da construtora</h1>
+        </div>
+
+        <div class="stat-grid">
+          <div class="stat-card">
+            <p class="num accent-graphite">12</p>
+            <p class="lbl">Obras em andamento</p>
+          </div>
+          <div class="stat-card">
+            <p class="num accent-yellow" id="pending-count">3</p>
+            <p class="lbl">Atualizações aguardando aprovação</p>
+          </div>
+          <div class="stat-card">
+            <p class="num accent-blue">2</p>
+            <p class="lbl">Obras próximas da entrega</p>
+          </div>
+          <div class="stat-card">
+            <p class="num accent-green">8</p>
+            <p class="lbl">Manutenções agendadas</p>
+          </div>
+        </div>
+
+        <p class="section-title mt-6">Obra em destaque</p>
+        <div class="card">
+          <p style="font-weight:800;font-size:15px;">Casa Ravena</p>
+          <p class="text-secondary" style="margin-top:2px;">Proprietários: Vanessa e Bruno</p>
+          <p class="text-muted" style="margin-top:2px;">Sapiranga/RS</p>
+          <p class="eyebrow mt-4" style="margin-top:16px;margin-bottom:8px;">Prestadores vinculados</p>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;">
+            <span class="badge badge-gray">Sagaz · Mestre de obras</span>
+            <span class="badge badge-gray">Mendes Instalações · Hidráulica e elétrica</span>
+            <span class="badge badge-gray">Alexandre · Pintura</span>
+            <span class="badge badge-gray">Ezequiel · Revestimentos</span>
+          </div>
+        </div>
+
+        <p class="section-title mt-6">Atualizações aguardando aprovação</p>
+
+        <div class="approval-item">
+          <div class="ap-top">
+            <div>
+              <p class="ap-house">Casa Ravena</p>
+              <p class="ap-meta">Mendes Instalações · Instalação elétrica · 55% · hoje</p>
+            </div>
+            <span class="badge badge-yellow ap-status"><span class="dot"></span>Pendente</span>
+          </div>
+          <div class="ap-actions">
+            <button class="btn btn-primary btn-sm" style="flex:1;" onclick="resolveApproval(this, true)">Aprovar</button>
+            <button class="btn btn-outline btn-sm" style="flex:1;" onclick="resolveApproval(this, false)">Rejeitar</button>
+          </div>
+        </div>
+
+        <div class="approval-item">
+          <div class="ap-top">
+            <div>
+              <p class="ap-house">Residência Família Costa</p>
+              <p class="ap-meta">Carlos Souza · Revestimentos · 20% · hoje</p>
+            </div>
+            <span class="badge badge-yellow ap-status"><span class="dot"></span>Pendente</span>
+          </div>
+          <div class="ap-actions">
+            <button class="btn btn-primary btn-sm" style="flex:1;" onclick="resolveApproval(this, true)">Aprovar</button>
+            <button class="btn btn-outline btn-sm" style="flex:1;" onclick="resolveApproval(this, false)">Rejeitar</button>
+          </div>
+        </div>
+
+        <div class="approval-item">
+          <div class="ap-top">
+            <div>
+              <p class="ap-house">Residência Família Andrade</p>
+              <p class="ap-meta">Ana Ribeiro · Pintura · 10% · ontem</p>
+            </div>
+            <span class="badge badge-yellow ap-status"><span class="dot"></span>Pendente</span>
+          </div>
+          <div class="ap-actions">
+            <button class="btn btn-primary btn-sm" style="flex:1;" onclick="resolveApproval(this, true)">Aprovar</button>
+            <button class="btn btn-outline btn-sm" style="flex:1;" onclick="resolveApproval(this, false)">Rejeitar</button>
+          </div>
+        </div>
+
+        <div class="card mt-6">
+          <p class="section-title">Próximas entregas</p>
+          <div class="delivery-row">
+            <div>
+              <p class="dr-name">Residência Família Martins</p>
+              <p class="dr-date">Entrega prevista: 20/08/2026</p>
+            </div>
+            <span class="badge badge-blue"><span class="dot"></span>96%</span>
+          </div>
+          <div class="delivery-row">
+            <div>
+              <p class="dr-name">Residência Família Ramos</p>
+              <p class="dr-date">Entrega prevista: 02/09/2026</p>
+            </div>
+            <span class="badge badge-blue"><span class="dot"></span>91%</span>
+          </div>
+        </div>
+
+        <div class="card mt-4">
+          <p class="section-title">Manutenções futuras agendadas</p>
+          <div class="simple-row">
+            <span class="text-secondary" style="font-size:13.5px;">Limpeza de calhas — 4 residências</span>
+            <span class="badge badge-gray">Set/2026</span>
+          </div>
+          <div class="simple-row">
+            <span class="text-secondary" style="font-size:13.5px;">Inspeção de telhado — 4 residências</span>
+            <span class="badge badge-gray">Nov/2026</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================ -->
+      <!-- 8. HISTÓRICO DA CASA -->
+      <!-- ============================================================ -->
+      <section class="screen" id="screen-historico">
+        <div class="screen-header">
+          <p class="eyebrow">Prontuário do imóvel</p>
+          <h1 class="page-title">Histórico da casa</h1>
+        </div>
+        <p class="text-muted mb-3" style="margin-bottom:16px;">Exemplo ilustrativo do ciclo completo do imóvel, incluindo eventos futuros simulados.</p>
+
+        <div class="hist-tabs">
+          <button class="hist-tab active" onclick="setHistTab('construcao', this)">Construção</button>
+          <button class="hist-tab" onclick="setHistTab('entrega', this)">Entrega</button>
+          <button class="hist-tab" onclick="setHistTab('posobra', this)">Pós-obra</button>
+        </div>
+
+        <div class="hist-panel active" data-panel="construcao">
+          <div class="card">
+            <div class="hist-stage-row">
+              <div class="hs-check" data-icon="check"></div>
+              <div><p class="hs-name">Fundação</p><p class="hs-date">Concluída em 10/03/2026</p></div>
+            </div>
+            <div class="hist-stage-row">
+              <div class="hs-check" data-icon="check"></div>
+              <div><p class="hs-name">Estrutura</p><p class="hs-date">Concluída em 05/05/2026</p></div>
+            </div>
+            <div class="hist-stage-row">
+              <div class="hs-check" data-icon="check"></div>
+              <div><p class="hs-name">Telhado</p><p class="hs-date">Concluído em 10/07/2026</p></div>
+            </div>
+            <div class="hist-stage-row">
+              <div class="hs-check progress" data-icon="clock"></div>
+              <div><p class="hs-name">Instalação elétrica</p><p class="hs-date">Em andamento · previsão 25/08/2026</p></div>
+            </div>
+            <div class="hist-stage-row">
+              <div class="hs-check progress" data-icon="clock"></div>
+              <div><p class="hs-name">Instalação hidráulica</p><p class="hs-date">Em andamento · previsão 30/08/2026</p></div>
+            </div>
+            <div class="hist-stage-row">
+              <div class="hs-check waiting" data-icon="clock"></div>
+              <div><p class="hs-name">Revestimentos</p><p class="hs-date">Aguardando · previsto para 15/09/2026</p></div>
+            </div>
+            <div class="hist-stage-row">
+              <div class="hs-check waiting" data-icon="clock"></div>
+              <div><p class="hs-name">Pintura</p><p class="hs-date">Aguardando · prevista para 30/09/2026</p></div>
+            </div>
+            <div class="hist-stage-row">
+              <div class="hs-check waiting" data-icon="clock"></div>
+              <div><p class="hs-name">Acabamentos</p><p class="hs-date">Aguardando · previstos para 15/10/2026</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hist-panel" data-panel="entrega">
+          <div class="card">
+            <p class="section-title">Data de entrega prevista</p>
+            <p style="font-size:20px;font-weight:800;">05/11/2026</p>
+          </div>
+          <div class="card mt-4">
+            <p class="section-title">Checklist de entrega</p>
+            <div class="checklist-row"><span data-icon="check"></span> Vistoria elétrica aprovada</div>
+            <div class="checklist-row"><span data-icon="check"></span> Vistoria hidráulica aprovada</div>
+            <div class="checklist-row"><span data-icon="check"></span> Pintura finalizada</div>
+            <div class="checklist-row"><span data-icon="check"></span> Limpeza final realizada</div>
+          </div>
+          <div class="card mt-4">
+            <p class="section-title">Fotos da entrega</p>
+            <div class="photo-row">
+              <div class="photo-thumb" onclick="openPhoto()" data-icon="camera"></div>
+              <div class="photo-thumb" onclick="openPhoto()" data-icon="camera"></div>
+              <div class="photo-thumb" onclick="openPhoto()" data-icon="camera"></div>
+            </div>
+          </div>
+          <div class="card mt-4">
+            <p class="section-title">Garantias</p>
+            <div class="simple-row"><span class="text-secondary" style="font-size:13.5px;">Estrutural</span><span class="badge badge-gray">5 anos</span></div>
+            <div class="simple-row"><span class="text-secondary" style="font-size:13.5px;">Elétrica / Hidráulica</span><span class="badge badge-gray">2 anos</span></div>
+            <div class="simple-row"><span class="text-secondary" style="font-size:13.5px;">Acabamentos</span><span class="badge badge-gray">90 dias</span></div>
+          </div>
+        </div>
+
+        <div class="hist-panel" data-panel="posobra">
+          <div class="card">
+            <p class="section-title">Manutenções realizadas</p>
+            <div id="hist-posobra-list"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================ -->
+      <!-- 9. MANUTENÇÃO (antiga "Serviços" — reorganizada em torno do Plano Anual) -->
+      <!-- ============================================================ -->
+      <section class="screen" id="screen-servicos">
+        <div class="cro-header">
+          <p class="cro-eyebrow">Casa Ravena</p>
+          <h1 class="cro-title">Manutenção</h1>
+        </div>
+
+        <!-- 1. Plano de Manutenção MIKAN -->
+        <div class="plan-hero-card" id="maint-plan-card"></div>
+
+        <!-- Manutenção preventiva -->
+        <div class="maint-intro">
+          <p class="maint-intro-text">Uma residência de alto padrão pede cuidado contínuo. Manutenção preventiva não é sobre consertar o que quebrou — é preservar desempenho, segurança e acabamentos antes que o tempo cobre o preço. A MIKAN continua cuidando da Casa Ravena muito depois da entrega das chaves.</p>
+          <div class="maint-intro-pillars">
+            <span class="maint-intro-pillar">Desempenho</span>
+            <span class="maint-intro-pillar">Segurança</span>
+            <span class="maint-intro-pillar">Instalações</span>
+            <span class="maint-intro-pillar">Acabamentos</span>
+            <span class="maint-intro-pillar">Durabilidade</span>
+          </div>
+        </div>
+
+        <!-- 2. Próximas manutenções -->
+        <p class="cro-section-label mt-6">Próximas manutenções</p>
+        <div id="maint-next-list"></div>
+
+        <!-- 3. Agenda anual -->
+        <p class="cro-section-label mt-6">Agenda anual</p>
+        <p class="maint-schedule-note">Datas demonstrativas — podem ser ajustadas a qualquer momento.</p>
+        <div class="maint-schedule-list" id="maint-schedule-list"></div>
+
+        <!-- 4. Histórico -->
+        <p class="cro-section-label mt-6">Histórico</p>
+        <div class="card" id="maint-historico-preview"></div>
+        <div class="link-row card mt-4" data-nav="screen-historico">
+          <span class="label"><span data-icon="history"></span> Ver histórico completo</span>
+          <span data-icon="chevronRight" data-icon-class="chevron"></span>
+        </div>
+
+        <!-- 5. Serviços extraordinários -->
+        <p class="cro-section-label mt-6">Precisa de algo além do plano?</p>
+        <p class="maint-avulso-note">Problemas ou necessidades fora do Plano de Manutenção MIKAN — solicite um atendimento avulso e nossa equipe entra em contato com um orçamento.</p>
+        <div class="maint-avulso-grid" id="maint-avulso-grid"></div>
+
+        <!-- WhatsApp -->
+        <a class="whatsapp-btn mt-6" href="https://wa.me/5551992135747" target="_blank" rel="noopener">
+          <span data-icon="chat"></span> Falar com a MIKAN no WhatsApp
+        </a>
+      </section>
+
+      <!-- ============================================================ -->
+      <!-- 9b. DOCUMENTOS DA CASA -->
+      <!-- ============================================================ -->
+      <section class="screen" id="screen-documentos">
+        <div class="cro-header">
+          <p class="cro-eyebrow">Casa Ravena</p>
+          <h1 class="cro-title">Documentos da Casa</h1>
+        </div>
+        <p class="doc-intro">Toda a documentação importante da sua casa, organizada e disponível quando você precisar.</p>
+        <div class="doc-list" id="doc-list"></div>
+      </section>
+
+      <!-- ============================================================ -->
+      <!-- 10. PERFIL -->
+      <!-- ============================================================ -->
+      <section class="screen" id="screen-perfil">
+        <div class="screen-header">
+          <p class="eyebrow">Conta</p>
+          <h1 class="page-title">Perfil</h1>
+        </div>
+
+        <div class="profile-head">
+          <div class="avatar">VB</div>
+          <p class="p-name">Vanessa e Bruno</p>
+          <p class="p-sub">Cliente desde Mar/2026</p>
+        </div>
+
+        <div class="card">
+          <div class="detail-row">
+            <span data-icon="building"></span>
+            <div><p class="d-label">Imóvel</p><p class="d-value">Casa Ravena</p></div>
+          </div>
+          <div class="detail-row">
+            <span data-icon="home"></span>
+            <div><p class="d-label">Endereço</p><p class="d-value">Rua Sérgio Ervino Michels, 33 · Bairro Amaral Ribeiro · Sapiranga/RS</p></div>
+          </div>
+          <div class="detail-row">
+            <span data-icon="calendar"></span>
+            <div><p class="d-label">Data de entrega prevista</p><p class="d-value">05/11/2026</p></div>
+          </div>
+          <div class="detail-row">
+            <span data-icon="shield"></span>
+            <div><p class="d-label">Plano atual</p><p class="d-value js-plano-atual">Nenhum contratado</p></div>
+          </div>
+          <div class="detail-row">
+            <span data-icon="phone"></span>
+            <div><p class="d-label">Telefone</p><p class="d-value">(51) 98888-7777</p></div>
+          </div>
+          <div class="detail-row">
+            <span data-icon="mail"></span>
+            <div><p class="d-label">E-mail</p><p class="d-value">vanessaebruno@email.com</p></div>
+          </div>
+        </div>
+
+        <p class="section-title mt-6">Notificações</p>
+        <div class="card">
+          <div class="switch-row">
+            <span class="sw-label">Atualizações da obra</span>
+            <div class="switch on" onclick="toggleSwitch(this)"><div class="knob"></div></div>
+          </div>
+          <div class="switch-row">
+            <span class="sw-label">Manutenções</span>
+            <div class="switch on" onclick="toggleSwitch(this)"><div class="knob"></div></div>
+          </div>
+          <div class="switch-row">
+            <span class="sw-label">Ofertas e promoções</span>
+            <div class="switch" onclick="toggleSwitch(this)"><div class="knob"></div></div>
+          </div>
+        </div>
+
+        <p class="section-title mt-6">Área de demonstração</p>
+        <div class="card">
+          <div class="link-row" data-mode="prestador">
+            <span class="label"><span data-icon="wrench"></span> Ver como prestador de serviço</span>
+            <span data-icon="chevronRight" data-icon-class="chevron"></span>
+          </div>
+          <div class="link-row mt-4" data-mode="construtora">
+            <span class="label"><span data-icon="users"></span> Ver como construtora</span>
+            <span data-icon="chevronRight" data-icon-class="chevron"></span>
+          </div>
+        </div>
+
+        <p class="app-footer-note">Uma experiência MIKAN Construtora</p>
+      </section>
+
+    </div>
+
+    <!-- ================================================================ -->
+    <!-- MENU INFERIOR -->
+    <!-- ================================================================ -->
+    <nav class="bottom-nav">
+      <button class="nav-item active" data-nav="screen-home" data-target="screen-home">
+        <span data-icon="home"></span><span>Início</span>
+      </button>
+      <button class="nav-item" data-nav="screen-obra" data-target="screen-obra">
+        <span data-icon="building"></span><span>Minha Obra</span>
+      </button>
+      <button class="nav-item" data-nav="screen-servicos" data-target="screen-servicos">
+        <span data-icon="shield"></span><span>Manutenção</span>
+      </button>
+      <button class="nav-item" data-nav="screen-perfil" data-target="screen-perfil">
+        <span data-icon="user"></span><span>Perfil</span>
+      </button>
+    </nav>
+
+    <!-- ================================================================ -->
+    <!-- MODAIS -->
+    <!-- ================================================================ -->
+
+    <div class="modal-overlay" id="modal-provider-sent">
+      <div class="modal-sheet">
+        <div class="modal-handle"></div>
+        <div class="modal-icon-circle" data-icon="check"></div>
+        <h3>Atualização enviada</h3>
+        <p class="modal-desc">Sua atualização foi enviada para a construtora. O cliente só visualizará esta informação após a aprovação.</p>
+        <div class="flow-diagram">
+          <div class="flow-step done">
+            <div class="flow-dot-wrap"><div class="flow-dot" data-icon="check"></div><div class="flow-line"></div></div>
+            <div class="flow-text"><p class="t">Prestador atualiza</p></div>
+          </div>
+          <div class="flow-step current">
+            <div class="flow-dot-wrap"><div class="flow-dot">2</div><div class="flow-line"></div></div>
+            <div class="flow-text"><p class="t">Construtora recebe</p></div>
+          </div>
+          <div class="flow-step">
+            <div class="flow-dot-wrap"><div class="flow-dot">3</div><div class="flow-line"></div></div>
+            <div class="flow-text"><p class="t">Construtora revisa</p></div>
+          </div>
+          <div class="flow-step">
+            <div class="flow-dot-wrap"><div class="flow-dot">4</div><div class="flow-line"></div></div>
+            <div class="flow-text"><p class="t">Construtora aprova</p></div>
+          </div>
+          <div class="flow-step">
+            <div class="flow-dot-wrap"><div class="flow-dot">5</div></div>
+            <div class="flow-text"><p class="t">Cliente visualiza</p></div>
+          </div>
+        </div>
+        <div class="modal-actions">
+          <button class="btn btn-primary" data-close-modal="modal-provider-sent">Entendi</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal genérico de detalhe/registro — usado tanto para Manutenção quanto para Obra em andamento -->
+    <div class="modal-overlay" id="modal-provider-detail">
+      <div class="modal-sheet pf-detail-sheet">
+        <div class="modal-handle"></div>
+        <div id="pf-detail-body"></div>
+      </div>
+    </div>
+
+    <div class="modal-overlay" id="modal-plan-anual-confirm">
+      <div class="modal-sheet">
+        <div class="modal-handle"></div>
+        <div class="modal-icon-circle" data-icon="check"></div>
+        <h3>Plano Anual contratado</h3>
+        <p class="modal-desc">Este é um protótipo visual. Nenhuma cobrança real será realizada — a contratação do plano ainda não está ativa no aplicativo real.</p>
+        <div class="modal-actions">
+          <button class="btn btn-primary" data-close-modal="modal-plan-anual-confirm">Fechar</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-overlay" id="modal-calendar">
+      <div class="modal-sheet">
+        <div class="modal-handle"></div>
+        <h3>Alterar data</h3>
+        <p class="modal-desc" id="calendar-item-label" style="margin-bottom:2px;">Etapa</p>
+        <p class="cal-month-label" id="calendar-month-label">Mês</p>
+        <div class="cal-grid" id="calendar-grid"></div>
+        <p class="cal-legend"><span class="cal-legend-dot available"></span> Disponível <span class="cal-legend-dot unavailable"></span> Indisponível</p>
+        <div class="modal-actions btn-block-row">
+          <button class="btn btn-outline" data-close-modal="modal-calendar">Cancelar</button>
+          <button class="btn btn-primary" id="calendar-confirm-btn" onclick="confirmCalendarDate()" disabled>Confirmar</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-overlay" id="modal-avulso-request">
+      <div class="modal-sheet">
+        <div class="modal-handle"></div>
+        <h3>Solicitar atendimento</h3>
+        <p class="modal-desc" style="margin-bottom:20px;">Serviço: <b id="avulso-service-name">Serviço</b></p>
+        <div class="field">
+          <label class="field-label">Descreva a necessidade</label>
+          <textarea id="avulso-note" placeholder="Conte um pouco sobre o que você precisa..."></textarea>
+        </div>
+        <div class="field">
+          <label class="field-label">Fotos (opcional)</label>
+          <div class="photo-row" id="avulso-photos">
+            <div class="photo-thumb add" onclick="addAvulsoPhoto()" data-icon="plus"></div>
+          </div>
+        </div>
+        <div class="field" style="margin-bottom:0;">
+          <label class="field-label">Data preferida</label>
+          <input type="date" id="avulso-date" class="select" />
+        </div>
+        <div class="modal-actions">
+          <button class="btn btn-commercial" onclick="submitAvulsoRequest()">Solicitar atendimento</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-overlay" id="modal-avulso-confirm">
+      <div class="modal-sheet">
+        <div class="modal-handle"></div>
+        <div class="modal-icon-circle" data-icon="checkCircle"></div>
+        <h3>Solicitação enviada</h3>
+        <p class="modal-desc">Nossa equipe vai analisar seu pedido e entrar em contato com um orçamento.</p>
+        <div class="modal-actions">
+          <a class="whatsapp-btn" href="https://wa.me/5551992135747" target="_blank" rel="noopener">
+            <span data-icon="chat"></span> Falar com a MIKAN no WhatsApp
+          </a>
+          <button class="btn btn-outline mt-3" data-close-modal="modal-avulso-confirm">Fechar</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-overlay" id="modal-photo">
+      <div class="modal-sheet">
+        <div class="modal-handle"></div>
+        <div class="lightbox-img" data-icon="camera"></div>
+        <h3>Foto da obra</h3>
+        <p class="modal-desc">Imagem ilustrativa (protótipo). No aplicativo real, aqui aparecerão as fotos enviadas pelo prestador de serviço.</p>
+        <div class="modal-actions">
+          <button class="btn btn-outline" data-close-modal="modal-photo">Fechar</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-overlay" id="modal-doc-preview">
+      <div class="modal-sheet">
+        <div class="modal-handle"></div>
+        <div class="lightbox-img" data-icon="file"></div>
+        <h3 id="doc-preview-name">Documento</h3>
+        <p class="modal-desc" id="doc-preview-meta">Versão</p>
+        <p class="modal-desc">Protótipo visual — este documento ainda não possui um arquivo real anexado.</p>
+        <div class="modal-actions">
+          <button class="btn btn-outline" data-close-modal="modal-doc-preview">Fechar</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-overlay" id="modal-doc-versions">
+      <div class="modal-sheet">
+        <div class="modal-handle"></div>
+        <h3 id="doc-versions-title">Documento</h3>
+        <p class="modal-desc" style="margin-bottom:20px;">Histórico de versões</p>
+        <div class="doc-versions-list" id="doc-versions-list"></div>
+        <div class="modal-actions">
+          <button class="btn btn-outline" data-close-modal="modal-doc-versions">Fechar</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-overlay" id="modal-stage-detail">
+      <div class="modal-sheet cro-detail-sheet">
+        <div class="modal-handle"></div>
+        <div class="cro-detail-head">
+          <div>
+            <p class="cro-detail-name" id="stage-detail-name">Etapa</p>
+            <p class="cro-detail-pct" id="stage-detail-pct">0% concluído</p>
+          </div>
+          <span class="badge badge-blue" id="stage-detail-status"><span class="dot"></span>Em andamento</span>
+        </div>
+
+        <div class="cro-detail-carousel-wrap">
+          <div class="cro-detail-carousel" id="stage-detail-carousel"></div>
+          <div class="estate-dots" id="stage-detail-dots"></div>
+        </div>
+
+        <p class="section-title" style="padding:0 20px;margin-bottom:16px;">Histórico da etapa</p>
+        <div class="cro-history" id="stage-detail-history"></div>
+
+        <div class="modal-actions" style="padding:0 20px;">
+          <button class="btn btn-outline" data-close-modal="modal-stage-detail">Fechar</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Toast -->
+    <div class="toast" id="toast">
+      <span data-icon="checkCircle"></span>
+      <span class="t-msg">Ação realizada</span>
+    </div>
+
+  </div>
+</div>
+
+<script src="js/app.js"></script>
+<script>
+  // Cronograma da Obra — referência PLS (sem qualquer dado financeiro)
+  const CRONOGRAMA = {
+    progresso: 35.14,
+    ultimaAtualizacao: "27/07/2026",
+    situacao: "Adiantada",
+    etapas: [
+      { id: "servicos-preliminares", name: "Serviços Preliminares e Gerais", status: "done", pct: 100, icon: "gear", photos: 3, weeklyPending: false,
+        instructions: "Instalação de canteiro de obras, tapumes, ligações provisórias de água e energia, e sinalização de segurança do terreno.",
+        checklist: ["Instalar tapumes e sinalização de segurança", "Providenciar ligações provisórias de água e energia", "Montar canteiro de obras e área de armazenamento"],
+        history: [
+          { date: "15/04/2026", pct: 100, note: "Fotos da obra." },
+          { date: "20/03/2026", pct: 60, note: "Fotos da obra." },
+        ] },
+      { id: "infraestrutura", name: "Infraestrutura", status: "done", pct: 100, icon: "building", photos: 4, weeklyPending: false,
+        instructions: "Execução de fundações, sapatas e vigas baldrame conforme projeto estrutural aprovado.",
+        checklist: ["Escavar e nivelar valas de fundação", "Executar sapatas e vigas baldrame", "Aguardar cura do concreto antes de prosseguir"],
+        history: [
+          { date: "10/05/2026", pct: 100, note: "Fotos da obra." },
+          { date: "22/04/2026", pct: 55, note: "Fotos da obra." },
+        ] },
+      { id: "outros-servicos", name: "Outros Serviços", status: "done", pct: 100, icon: "tools", photos: 2, weeklyPending: false,
+        instructions: "Serviços complementares de apoio à obra, incluindo movimentação de terra e limpeza do terreno.",
+        checklist: ["Realizar limpeza e nivelamento do terreno", "Organizar acessos e áreas de circulação"],
+        history: [
+          { date: "18/05/2026", pct: 100, note: "Fotos da obra." },
+        ] },
+      { id: "paredes-paineis", name: "Paredes e Painéis", status: "andamento", pct: 70, icon: "building", photos: 5, weeklyPending: true,
+        instructions: "Levantamento de alvenaria interna e externa conforme projeto arquitetônico, respeitando prumo, nível e vãos de esquadrias.",
+        checklist: ["Conferir prumo e nível a cada fiada", "Respeitar vãos previstos para portas e janelas", "Registrar fotos do avanço por pavimento"],
+        history: [
+          { date: "27/07/2026", pct: 70, note: "Fotos da obra." },
+          { date: "30/06/2026", pct: 45, note: "Fotos da obra." },
+          { date: "31/05/2026", pct: 20, note: "Fotos da obra." },
+        ] },
+      { id: "supraestrutura", name: "Supraestrutura", status: "andamento", pct: 60, icon: "building", photos: 4, weeklyPending: true,
+        instructions: "Execução da estrutura de concreto armado dos pavimentos superiores — pilares, vigas e lajes.",
+        checklist: ["Conferir armaduras antes da concretagem", "Executar concretagem conforme cronograma", "Aguardar prazo de cura antes de desforma"],
+        history: [
+          { date: "27/07/2026", pct: 60, note: "Fotos da obra." },
+          { date: "28/06/2026", pct: 35, note: "Fotos da obra." },
+        ] },
+      { id: "impermeabilizacoes", name: "Impermeabilizações", status: "andamento", pct: 60, icon: "drop", photos: 3, weeklyPending: true,
+        instructions: "Aplicação de manta/impermeabilizante em lajes, áreas molhadas e fundações, conforme especificação técnica.",
+        checklist: ["Preparar e limpar a superfície antes da aplicação", "Aplicar sistema impermeabilizante conforme especificação", "Realizar teste de estanqueidade"],
+        history: [
+          { date: "27/07/2026", pct: 60, note: "Fotos da obra." },
+          { date: "25/06/2026", pct: 30, note: "Fotos da obra." },
+        ] },
+      { id: "eletrica-telefonica", name: "Instalações Elétricas e Telefônicas", status: "andamento", pct: 30, icon: "wrench", photos: 3, weeklyPending: true,
+        instructions: "Passagem de eletrodutos e fiação conforme projeto elétrico, incluindo pontos de tomada, iluminação e lógica/telefonia.",
+        checklist: ["Seguir o projeto elétrico aprovado", "Testar continuidade de cada circuito instalado", "Registrar fotos antes do fechamento das paredes"],
+        history: [
+          { date: "27/07/2026", pct: 30, note: "Fotos da obra." },
+          { date: "29/06/2026", pct: 12, note: "Fotos da obra." },
+        ] },
+      { id: "hidraulica", name: "Instalações Hidráulicas", status: "andamento", pct: 10, icon: "drop", photos: 2, weeklyPending: true,
+        instructions: "Instalação de tubulações de água fria/quente e pontos hidráulicos conforme projeto hidrossanitário.",
+        checklist: ["Seguir o projeto hidrossanitário aprovado", "Testar pressão e vedação das tubulações", "Registrar fotos antes do fechamento das paredes"],
+        history: [
+          { date: "27/07/2026", pct: 10, note: "Fotos da obra." },
+        ] },
+      { id: "esgoto-pluviais", name: "Instalações de Esgoto e Águas Pluviais", status: "andamento", pct: 5, icon: "drop", photos: 2, weeklyPending: true,
+        instructions: "Execução das redes de esgoto sanitário e captação de águas pluviais, com caimento adequado até a rede geral.",
+        checklist: ["Garantir caimento mínimo das tubulações", "Testar escoamento antes do fechamento", "Registrar fotos das conexões e caixas de inspeção"],
+        history: [
+          { date: "27/07/2026", pct: 5, note: "Fotos da obra." },
+        ] },
+      { id: "esquadrias", name: "Esquadrias", status: "nao-iniciado", pct: 0 },
+      { id: "vidros-plasticos", name: "Vidros e Plásticos", status: "nao-iniciado", pct: 0 },
+      { id: "coberturas", name: "Coberturas", status: "nao-iniciado", pct: 0 },
+      { id: "revestimentos-internos", name: "Revestimentos Internos", status: "nao-iniciado", pct: 0, weeklyPending: false,
+        instructions: "Assentamento de revestimentos cerâmicos/porcelanato em áreas internas, após conclusão das instalações elétrica e hidráulica.",
+        checklist: ["Conferir nivelamento do contrapiso", "Assentar revestimento conforme paginação do projeto", "Rejuntar e limpar após a cura"] },
+      { id: "forros", name: "Forros", status: "nao-iniciado", pct: 0 },
+      { id: "revestimentos-externos", name: "Revestimentos Externos", status: "nao-iniciado", pct: 0, weeklyPending: false,
+        instructions: "Aplicação de revestimentos de fachada (pedra, madeira, textura) conforme memorial descritivo e projeto de fachada.",
+        checklist: ["Conferir prumo e alinhamento da fachada", "Aplicar revestimento conforme memorial descritivo", "Proteger áreas concluídas de intempéries"] },
+      { id: "pintura", name: "Pintura", status: "nao-iniciado", pct: 0, weeklyPending: false,
+        instructions: "Pintura interna e externa conforme paleta de cores definida no memorial descritivo, após liberação dos revestimentos.",
+        checklist: ["Preparar e lixar as superfícies", "Aplicar fundo/selador antes das demãos finais", "Aplicar demãos de acabamento conforme paleta definida"] },
+      { id: "pisos", name: "Pisos", status: "nao-iniciado", pct: 0 },
+      { id: "acabamentos", name: "Acabamentos", status: "nao-iniciado", pct: 0 },
+      { id: "loucas-metais", name: "Louças e Metais", status: "nao-iniciado", pct: 0 },
+      { id: "complementos", name: "Complementos", status: "nao-iniciado", pct: 0 },
+    ],
+  };
+
+  renderCronograma(CRONOGRAMA);
+</script>
+
+</body>
+</html>
