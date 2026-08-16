@@ -271,6 +271,24 @@ img { max-width: 100%; display: block; }
 }
 .nav-item.active span { font-weight: 700; }
 
+/* iPhone/Safari: no modo mobile (.phone em 100vw/100vh, ver media query
+   acima) a barra inferior de gestos/endereço do Safari pode cobrir uma
+   barra de navegação ancorada apenas ao .phone. position:fixed ancora à
+   viewport real e respeita a safe area, evitando que os 4 itens sumam. */
+@media (max-width: 460px) {
+  .bottom-nav {
+    position: fixed;
+    padding-bottom: calc(8px + env(safe-area-inset-bottom));
+    z-index: 30;
+  }
+  .screen {
+    padding-bottom: calc(110px + env(safe-area-inset-bottom));
+  }
+  .screen.no-nav {
+    padding-bottom: calc(84px + env(safe-area-inset-bottom));
+  }
+}
+
 /* ==========================================================================
    Typography helpers
    ========================================================================== */
